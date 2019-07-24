@@ -2,17 +2,16 @@
 
 ## Introduction
 
-This project shows the capability of a bot to react to messages sent within a group using Node.JS.
+GroupMe Bot built with NodeJS and deployed on Heroku to display reminders within a University of Virginia organization.
 
 ## Requirements:
 
-  * GroupMe account
-  * Giphy account
-  * Heroku account
-  * [Heroku Toolbelt](https://toolbelt.heroku.com/)
+  * GroupMe
+  * Heroku
   
 ## Uses:
 
-* /Parents Formal command to get a reminder on the date of Formal
+* /parents command to get a reminder on the date of Parent's Formal
+* /pig command for the date of Pig Dinner
 
 
