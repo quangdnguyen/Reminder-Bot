@@ -7,13 +7,26 @@ var OWEN_ID = 39868511;
 
 function respond() {
   var request = JSON.parse(this.req.chunks[0]),
-    botRegex = /^\/Parents Formal$/;
+    formalRegex = /^\/parents$/;
+    pigRegex = /^\/pig$/;
+    boRegex = /^\/Bo$/;
 
-  if (request.text && botRegex.test(request.text)) {
+  if (request.text && formalRegex.test(request.text)) {
     this.res.writeHead(200);
-    postMessage("10/26");
+    postMessage("Parents Formal: 10/26");
     this.res.end();
-  } else {
+  } 
+  else if (request.text && pigRegex.test(request.text)) {
+    this.res.writeHead(200);
+    postMessage("Pig Dinner: 9/28");
+    this.res.end();
+  }
+  else if (request.text && boRegex.test(request.text)) {
+    this.res.writeHead(200);
+    postMessage("Bo Blair: Status - Pledge; Interests - Beans");
+    this.res.end();
+  }
+  else {
     console.log("don't care");
     this.res.writeHead(200);
     this.res.end();
