@@ -11,7 +11,7 @@ function respond() {
 
   if (request.text && botRegex.test(request.text)) {
     this.res.writeHead(200);
-    postMessage("10/27");
+    postMessage("10/26");
     this.res.end();
   } else {
     console.log("don't care");
