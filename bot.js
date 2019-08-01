@@ -10,6 +10,7 @@ function respond() {
     formalRegex = /^\/parents$/;
     pigRegex = /^\/pig$/;
     boRegex = /^\/Bo$/;
+    tubingRegex = /^\/Bo$/;
 
   if (request.text && formalRegex.test(request.text)) {
     this.res.writeHead(200);
@@ -24,6 +25,11 @@ function respond() {
   else if (request.text && boRegex.test(request.text)) {
     this.res.writeHead(200);
     postMessage("Bo Blair: Status - Pledge; Interests - Beans");
+    this.res.end();
+  }
+  else if (request.text && tubingRegex.test(request.text)) {
+    this.res.writeHead(200);
+    postMessage("Tubing: Date - 8/24, Time - No idea ask Barron");
     this.res.end();
   }
   else {
