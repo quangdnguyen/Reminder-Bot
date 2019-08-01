@@ -10,7 +10,7 @@ function respond() {
     formalRegex = /^\/parents$/;
     pigRegex = /^\/pig$/;
     boRegex = /^\/Bo$/;
-    tubingRegex = /^\/Bo$/;
+    tubingRegex = /^\/tubing$/;
 
   if (request.text && formalRegex.test(request.text)) {
     this.res.writeHead(200);
