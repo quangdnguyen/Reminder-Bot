@@ -11,6 +11,7 @@ function respond() {
     pigRegex = /^\/pig$/;
     boRegex = /^\/Bo$/;
     tubingRegex = /^\/tubing$/;
+    eventsRegex = /^\/events$/;
 
   if (request.text && formalRegex.test(request.text)) {
     this.res.writeHead(200);
@@ -30,6 +31,11 @@ function respond() {
   else if (request.text && tubingRegex.test(request.text)) {
     this.res.writeHead(200);
     postMessage("Tubing: Date - 8/24, Time - No idea ask Barron");
+    this.res.end();
+  }
+  else if (request.text && eventsRegex.test(request.text)) {
+    this.res.writeHead(200);
+    postMessage("Events for week: " + '\n' + "Tuesday 8:30pm - pong at house with brothers/dg/pi phi/aphi/rushees" + '\n' + " Thursday 930pm - mixer with pi phi, Dj Spector at Trin" + '\n' + "Friday 4pm tailgate band starts at 5pm");
     this.res.end();
   }
   else {
